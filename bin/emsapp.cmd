@@ -1,0 +1,1 @@
+java -jar .\ems-0.0.1-SNAPSHOT.war

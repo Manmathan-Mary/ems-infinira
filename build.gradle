@@ -1,0 +1,72 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'war'
+	id 'application'
+	id 'java'
+}
+
+apply plugin: 'application'
+mainClassName='com.infinira.ems.EMSApplication'
+configurations.all { resolutionStrategy { force 'org.apache.groovy:groovy-all:4.0.3'}}
+version='0.0.1-SNAPSHOT'
+sourceCompatibility = 1.15
+targetCompatibility = 1.18
+
+java {
+    withSourcesJar()
+}   
+  
+repositories{
+	mavenCentral()
+}
+
+dependencies {
+	implementation "org.apache.httpcomponents:httpclient:4.5.13"
+	implementation "org.apache.httpcomponents:httpasyncclient:4.1.5"
+	implementation "org.apache.httpcomponents:httpmime:4.5.13"
+	implementation "org.codehaus.groovy:groovy-all:3.0.11"
+	implementation 'org.apache.logging.log4j:log4j-1.2-api:2.17.0'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation "org.apache.tomcat.embed:tomcat-embed-jasper"
+	implementation "org.glassfish:javax.faces:2.3.7"
+	testImplementation 'org.hamcrest:hamcrest:2.2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+    runtimeOnly 'org.postgresql:postgresql:42.4.0'
+    //testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    //testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.8.1'	
+	testImplementation files('libs/commons-lang3-3.12.0.jar')
+	testImplementation files('libs/commons-lang3-3.12.0-tests.jar')
+	testImplementation files('libs/junit-jupiter-5.8.2.jar')
+	testImplementation files('libs/junit-jupiter-api-5.8.2.jar')
+	testImplementation files('libs/junit-jupiter-engine-5.8.2.jar')
+	testImplementation files('libs/junit-jupiter-params-5.8.2.jar')
+	testImplementation files('libs/junit-jupiter-migrationsupport-5.8.2.jar')
+	testImplementation files('libs/rest-assured-5.1.1.jar')
+	testImplementation files('libs/rest-assured-all-5.1.1.jar')
+	testImplementation "io.rest-assured:json-path:4.1.2"
+    testImplementation "io.rest-assured:xml-path:4.1.2"
+}
+
+run {
+    standardInput = System.in
+}
+
+bootJar {
+    manifest {
+	attributes 'Start-Class': 'com.infinira.ems.test.EMSApplication'
+    }
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+task Cache doLast() {
+    configurations.compileClasspath.each { println it }
+    
+    configurations.runtimeClasspath.each { println it }
+}
