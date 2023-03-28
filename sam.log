@@ -1,0 +1,103 @@
+2023-03-27 13:35:28,521 main DEBUG Apache Log4j Core 2.17.2 initializing configuration XmlConfiguration[location=jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml]
+2023-03-27 13:35:28,559 main DEBUG PluginManager 'Core' found 127 plugins
+2023-03-27 13:35:28,560 main DEBUG PluginManager 'Level' found 0 plugins
+2023-03-27 13:35:28,563 main DEBUG PluginManager 'Lookup' found 16 plugins
+2023-03-27 13:35:28,564 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2023-03-27 13:35:28,582 main DEBUG PluginManager 'TypeConverter' found 26 plugins
+2023-03-27 13:35:28,613 main DEBUG PatternLayout$Builder(pattern="%d{HH} [%t] %-5level %logger{36} - %msg%n", PatternSelector=null, Configuration(jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2023-03-27 13:35:28,618 main DEBUG PluginManager 'Converter' found 48 plugins
+2023-03-27 13:35:28,648 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2023-03-27 13:35:28,676 main DEBUG ConsoleAppender$Builder(target="SYSTEM_OUT", follow="null", direct="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d{HH} [%t] %-5level %logger{36} - %msg%n), name="LogToConsole", Configuration(jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml), Filter=null, ={})
+2023-03-27 13:35:28,691 main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
+2023-03-27 13:35:28,691 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2023-03-27 13:35:28,692 main DEBUG PatternLayout$Builder(pattern="%d %p %c{1.} [%t] %m%n", PatternSelector=null, Configuration(jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2023-03-27 13:35:28,695 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.FileAppender].
+2023-03-27 13:35:28,710 main DEBUG FileAppender$Builder(fileName="C://swinst//ems-docker//ems-infinira-2//logs//app.log", append="null", locking="null", advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d %p %c{1.} [%t] %m%n), name="LogToFile", Configuration(jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml), Filter=null, ={})
+2023-03-27 13:35:28,713 main DEBUG Starting FileManager C://swinst//ems-docker//ems-infinira-2//logs//app.log
+2023-03-27 13:35:28,718 main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2023-03-27 13:35:28,725 main DEBUG createAppenders(={LogToConsole, LogToFile})
+2023-03-27 13:35:28,741 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-03-27 13:35:28,767 main DEBUG createAppenderRef(ref="LogToFile", level="null", Filter=null)
+2023-03-27 13:35:28,772 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-03-27 13:35:28,774 main DEBUG createAppenderRef(ref="LogToConsole", level="null", Filter=null)
+2023-03-27 13:35:28,774 main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2023-03-27 13:35:28,792 main DEBUG LoggerConfig$Builder(additivity="true", level="DEBUG", levelAndRefs="null", name="com.infinira.ems.dao", includeLocation="null", ={LogToFile, LogToConsole}, ={}, Configuration(jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml), Filter=null)
+2023-03-27 13:35:28,797 main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2023-03-27 13:35:28,798 main DEBUG createLoggers(={com.infinira.ems.dao})
+2023-03-27 13:35:28,799 main WARN No Root logger was configured, creating default ERROR-level Root logger with Console appender
+2023-03-27 13:35:28,807 main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false-2
+2023-03-27 13:35:28,809 main DEBUG Configuration XmlConfiguration[location=jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml] initialized
+2023-03-27 13:35:28,809 main DEBUG Starting configuration XmlConfiguration[location=jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml]
+2023-03-27 13:35:28,810 main DEBUG Started configuration XmlConfiguration[location=jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml] OK.
+2023-03-27 13:35:28,811 main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
+2023-03-27 13:35:28,811 main DEBUG OutputStream closed
+2023-03-27 13:35:28,812 main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
+2023-03-27 13:35:28,817 main DEBUG Appender DefaultConsole-1 stopped with status true
+2023-03-27 13:35:28,818 main DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@8ed9cf OK
+2023-03-27 13:35:28,958 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b
+2023-03-27 13:35:28,961 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b,component=StatusLogger
+2023-03-27 13:35:28,963 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b,component=ContextSelector
+2023-03-27 13:35:28,964 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b,component=Loggers,name=com.infinira.ems.dao
+2023-03-27 13:35:28,966 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b,component=Appenders,name=DefaultConsole-2
+2023-03-27 13:35:28,966 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b,component=Appenders,name=LogToConsole
+2023-03-27 13:35:28,967 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b,component=Appenders,name=LogToFile
+2023-03-27 13:35:28,973 main DEBUG org.apache.logging.log4j.core.util.SystemClock supports precise timestamps.
+2023-03-27 13:35:28,973 main DEBUG Reconfiguration complete for context[name=226b143b] at URI jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml (org.apache.logging.log4j.core.LoggerContext@61d34b4) with optional ClassLoader: null
+2023-03-27 13:35:28,974 main DEBUG Shutdown hook enabled. Registering a new one.
+2023-03-27 13:35:28,981 main DEBUG LoggerContext[name=226b143b, org.apache.logging.log4j.core.LoggerContext@61d34b4] started OK.
+2023-03-27 13:35:29,372 main DEBUG Reconfiguration started for context[name=226b143b] at URI null (org.apache.logging.log4j.core.LoggerContext@61d34b4) with optional ClassLoader: null
+2023-03-27 13:35:29,372 main DEBUG Using configurationFactory org.apache.logging.log4j.core.config.ConfigurationFactory$Factory@6c931d35
+2023-03-27 13:35:29,398 main DEBUG PluginManager 'Lookup' found 16 plugins
+2023-03-27 13:35:29,400 main DEBUG Closing ConnectionInputStream org.springframework.boot.loader.jar.JarURLConnection$ConnectionInputStream@44b194fe
+2023-03-27 13:35:29,403 main DEBUG Apache Log4j Core 2.17.2 initializing configuration XmlConfiguration[location=jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml]
+2023-03-27 13:35:29,404 main DEBUG PluginManager 'Core' found 127 plugins
+2023-03-27 13:35:29,404 main DEBUG PluginManager 'Level' found 0 plugins
+2023-03-27 13:35:29,405 main DEBUG PluginManager 'Lookup' found 16 plugins
+2023-03-27 13:35:29,405 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2023-03-27 13:35:29,406 main DEBUG PatternLayout$Builder(pattern="%d{HH} [%t] %-5level %logger{36} - %msg%n", PatternSelector=null, Configuration(jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2023-03-27 13:35:29,407 main DEBUG PluginManager 'Converter' found 48 plugins
+2023-03-27 13:35:29,407 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2023-03-27 13:35:29,408 main DEBUG ConsoleAppender$Builder(target="SYSTEM_OUT", follow="null", direct="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d{HH} [%t] %-5level %logger{36} - %msg%n), name="LogToConsole", Configuration(jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml), Filter=null, ={})
+2023-03-27 13:35:29,409 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2023-03-27 13:35:29,410 main DEBUG PatternLayout$Builder(pattern="%d %p %c{1.} [%t] %m%n", PatternSelector=null, Configuration(jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2023-03-27 13:35:29,411 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.FileAppender].
+2023-03-27 13:35:29,411 main DEBUG FileAppender$Builder(fileName="C://swinst//ems-docker//ems-infinira-2//logs//app.log", append="null", locking="null", advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d %p %c{1.} [%t] %m%n), name="LogToFile", Configuration(jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml), Filter=null, ={})
+2023-03-27 13:35:29,411 main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2023-03-27 13:35:29,412 main DEBUG createAppenders(={LogToConsole, LogToFile})
+2023-03-27 13:35:29,412 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-03-27 13:35:29,413 main DEBUG createAppenderRef(ref="LogToFile", level="null", Filter=null)
+2023-03-27 13:35:29,413 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-03-27 13:35:29,413 main DEBUG createAppenderRef(ref="LogToConsole", level="null", Filter=null)
+2023-03-27 13:35:29,414 main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2023-03-27 13:35:29,414 main DEBUG LoggerConfig$Builder(additivity="true", level="DEBUG", levelAndRefs="null", name="com.infinira.ems.dao", includeLocation="null", ={LogToFile, LogToConsole}, ={}, Configuration(jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml), Filter=null)
+2023-03-27 13:35:29,415 main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2023-03-27 13:35:29,415 main DEBUG createLoggers(={com.infinira.ems.dao})
+2023-03-27 13:35:29,415 main WARN No Root logger was configured, creating default ERROR-level Root logger with Console appender
+2023-03-27 13:35:29,416 main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false-3
+2023-03-27 13:35:29,417 main DEBUG Configuration XmlConfiguration[location=jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml] initialized
+2023-03-27 13:35:29,417 main DEBUG Starting configuration XmlConfiguration[location=jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml]
+2023-03-27 13:35:29,417 main DEBUG Started configuration XmlConfiguration[location=jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml] OK.
+2023-03-27 13:35:29,418 main DEBUG Appender LogToFile stopped with status true
+2023-03-27 13:35:29,418 main DEBUG Appender LogToConsole stopped with status true
+2023-03-27 13:35:29,418 main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-2
+2023-03-27 13:35:29,418 main DEBUG OutputStream closed
+2023-03-27 13:35:29,419 main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-2, all resources released: true
+2023-03-27 13:35:29,419 main DEBUG Appender DefaultConsole-2 stopped with status true
+2023-03-27 13:35:29,419 main DEBUG Stopped XmlConfiguration[location=jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml] OK
+2023-03-27 13:35:29,420 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b
+2023-03-27 13:35:29,421 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b,component=StatusLogger
+2023-03-27 13:35:29,421 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b,component=ContextSelector
+2023-03-27 13:35:29,421 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b,component=Loggers,name=com.infinira.ems.dao
+2023-03-27 13:35:29,422 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b,component=Appenders,name=LogToConsole
+2023-03-27 13:35:29,422 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b,component=Appenders,name=LogToFile
+2023-03-27 13:35:29,422 main DEBUG Registering MBean org.apache.logging.log4j2:type=226b143b,component=Appenders,name=DefaultConsole-3
+2023-03-27 13:35:29,423 main DEBUG Reconfiguration complete for context[name=226b143b] at URI jar:file:/app.jar!/WEB-INF/classes!/log4j2.xml (org.apache.logging.log4j.core.LoggerContext@61d34b4) with optional ClassLoader: null
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.1)
+

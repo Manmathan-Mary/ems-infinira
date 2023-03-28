@@ -2,6 +2,8 @@ package com.infinira.ems.model;
 
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
+import java.io.Serializable;
+
 enum Gender{
 	MALE,FEMALE,TRANSGENDER;
 }
@@ -14,8 +16,9 @@ enum BloodGroup
 	OPOS,APOS,BPOS,ABPOS,ANEG,BNEG,ABNEG;
 }
 
-public class Employee
+public class Employee implements Serializable
 {
+	private static final long serialVersionUID = 5560221391479816650L;
 	private long empId;
 	private String firstName;
 	private String middleName;
@@ -368,5 +371,37 @@ public class Employee
 	
 	public void setLastUpdate(OffsetDateTime lastUpdate) {
 		this.lastUpdate = lastUpdate;
-	}	
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("Employee ID: ").append(empId).append("\n");
+		sb.append("Name: ").append(firstName).append(" ").append(middleName).append(" ").append(lastName).append("\n");
+		sb.append("Designation: ").append(designation).append("\n");
+		sb.append("Salary: $").append(salary).append("\n");
+		sb.append("Email: ").append(email).append("\n");
+		sb.append("Mobile: ").append(mobileNo).append("\n");
+		sb.append("Date of Birth: ").append(dateOfBirth.toString()).append("\n");
+		sb.append("Department ID: ").append(departmentId).append("\n");
+		sb.append("Date of Hire: ").append(dateOfHire.toString()).append("\n");
+		sb.append("Date of Leaving: ").append(dateOfLeaving == null ? "N/A" : dateOfLeaving.toString()).append("\n");
+		sb.append("Status: ").append(status).append("\n");
+		sb.append("Manager ID: ").append(managerId).append("\n");
+		sb.append("Marital Status: ").append(maritalStatus.toString()).append("\n");
+		sb.append("Differently Abled: ").append(differentlyAbled ? "Yes" : "No").append("\n");
+		sb.append("Passport Number: ").append(passPortNo).append("\n");
+		sb.append("Blood Group: ").append(bloodGroup.toString()).append("\n");
+		sb.append("Gender: ").append(gender.toString()).append("\n");
+		sb.append("Tax ID: ").append(taxId).append("\n");
+		sb.append("National ID: ").append(nationalId).append("\n");
+		sb.append("Address: ").append(address1).append(", ").append(address2).append(", ")
+				.append(city).append(", ").append(state).append(", ").append(country).append(", ")
+				.append(postalCode).append("\n");
+		sb.append("Date of Creation: ").append(dateOfCreation.toString()).append("\n");
+		sb.append("Last Update: ").append(lastUpdate.toString()).append("\n");
+
+		return sb.toString();
+	}
 }

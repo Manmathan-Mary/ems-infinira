@@ -1,7 +1,6 @@
 package com.infinira.ems.util;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.xml.DOMConfigurator;  
+
 import java.net.URL;
 import java.text.MessageFormat;
 
@@ -16,7 +15,7 @@ public class LogUtil {
 			throw new RuntimeException(MessageFormat.format(MSG_0001, LOGGER_CONFIG));
 		}
 		try {
-			DOMConfigurator.configure(url);
+			//DOMConfigurator.configure(url);
 			this.logger = Logger.getLogger(LogUtil.class);
 		}catch(Exception ex) {
 			throw new RuntimeException(MessageFormat.format(MSG_0002, LOGGER_CONFIG), ex);

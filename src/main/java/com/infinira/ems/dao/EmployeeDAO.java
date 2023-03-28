@@ -13,16 +13,21 @@ import java.util.Optional;
 import java.util.List;
 import java.util.ArrayList;
 import java.text.MessageFormat;
-import org.apache.log4j.Logger;
-import org.apache.log4j.Level;
+//import org.apache.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.log4j.Level;
 import com.infinira.ems.model.Employee;
+import com.infinira.ems.EMSApplication;
 import com.infinira.ems.customexception.EMSException;
 import com.infinira.ems.util.DBUtil;
-import com.infinira.ems.util.LogUtil;
+//import com.infinira.ems.util.LogUtil;
 import com.infinira.ems.util.ResourceUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class EmployeeDAO {
-	private static Logger logger = LogUtil.getInstance().getLogger();
+	//private static Logger logger = LogUtil.getInstance().getLogger();
+    private static final Logger logger = LogManager.getLogger("com.infinira.ems.dao");
 	private static ResourceUtil resourceUtil = ResourceUtil.getInstance();
 
 	
@@ -31,6 +36,7 @@ public class EmployeeDAO {
 		if (emp == null ) {
 			throw new EMSException(resourceUtil.getMessage("EMS-0005"), null);
 		}
+		logger.debug("Creating employee {}", emp.getFirstName());
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -43,16 +49,20 @@ public class EmployeeDAO {
 			setValue(pstmt, emp, true);
 			createStatus = pstmt.executeUpdate();
 			if(createStatus == 0) {
+				logger.error(resourceUtil.getMessage("EMS-0006", emp.getFirstName()));
 				throw new EMSException(resourceUtil.getMessage("EMS-0006", emp.getFirstName()), null);
 			}
 			rs = pstmt.getGeneratedKeys();
 			if (!rs.next()) {
+				logger.error(resourceUtil.getMessage("EMS-0006", emp.getFirstName()));
 				throw new EMSException(resourceUtil.getMessage("EMS-0006", emp.getFirstName()), null);
 			}
 			empId = rs.getLong(1);
 			emp.setEmpId(empId);
+			logger.debug("Employee created {}",empId);
 			return empId;			
 		} catch (Throwable th) {
+			logger.error(resourceUtil.getMessage("EMS-0006", emp.getFirstName()));
 			throw new EMSException(resourceUtil.getMessage("EMS-0006", emp.getFirstName()), th);
 		} finally {
 				DBUtil.close(rs, pstmt, conn);
@@ -63,6 +73,7 @@ public class EmployeeDAO {
 		if(empId <= 0) {
 			throw new EMSException(resourceUtil.getMessage("EMS-0004", empId), null);
 		}
+		logger.debug("Getting employee details for emloyee ID {} ", empId);
 		Connection conn = null;	
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -77,8 +88,11 @@ public class EmployeeDAO {
 				throw new EMSException(resourceUtil.getMessage("EMS-0002", empId),null);
 			}
 			emp = getValue(rs);
+			logger.debug("Employee details got for emloyee ID {} ", empId);
+			logger.debug("Employee details:{}",emp.toString());
 			return Optional.ofNullable(emp);			
 		} catch (Throwable th) {
+			logger.error(resourceUtil.getMessage("EMS-0003", empId));
 			throw new EMSException(resourceUtil.getMessage("EMS-0003", empId), th);
 		} finally {
 			DBUtil.close(rs, pstmt, conn);
@@ -179,6 +193,7 @@ public class EmployeeDAO {
 		if (emp == null ) {
 			throw new EMSException(resourceUtil.getMessage("EMS-0007"), null);
 		}
+		logger.debug("Updating employee details for emloyee ID {} ",emp.getEmpId());
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -194,8 +209,10 @@ public class EmployeeDAO {
 			if (updatedRowCount == 0) {
 				throw new EMSException(resourceUtil.getMessage("EMS-0008", emp.getEmpId(), emp.getFirstName()),null);
 			}
+			logger.debug("Updated employee details for emloyee ID {} ",emp.getEmpId());
 			return updatedRowCount;			
 		} catch (Throwable th) {
+			logger.error(resourceUtil.getMessage("EMS-0008", emp.getEmpId(), emp.getFirstName()));
 			throw new EMSException(resourceUtil.getMessage("EMS-0008", emp.getEmpId(), emp.getFirstName()),th);
 		} finally {
 			DBUtil.close(rs, pstmt, conn);
@@ -206,6 +223,7 @@ public class EmployeeDAO {
 		if(empId <= 0) {
 			new EMSException(resourceUtil.getMessage("EMS-0009"), null);
 		}
+		logger.debug("Deleting employee details for emloyee ID {} ",empId);
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -219,8 +237,10 @@ public class EmployeeDAO {
 			if (deletedRowCount == 0) {
 				new EMSException(resourceUtil.getMessage("EMS-0010"), null);
 			}
+			logger.debug("Deleted employee details for emloyee ID {} ",empId);
 			return deletedRowCount;			
 		} catch (Throwable th) {
+			logger.error(resourceUtil.getMessage("EMS-0011", empId));
 			throw new EMSException(resourceUtil.getMessage("EMS-0011", empId), null);
 		} finally {
 				DBUtil.close(rs, pstmt, conn);

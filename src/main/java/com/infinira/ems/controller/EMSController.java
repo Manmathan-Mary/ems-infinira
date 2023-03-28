@@ -1,6 +1,9 @@
 package com.infinira.ems.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +22,7 @@ import com.infinira.ems.service.EMSService;
 
 @RestController
 @RequestMapping(path="/ems")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://ems-angular:80","http://localhost:8082"})
 public class EMSController {
 	@Autowired
 	private EMSService emsService;
@@ -29,6 +32,7 @@ public class EMSController {
 		return (emsService.create(emp));
     }
 	
+
 	@RequestMapping(value = "/employee/get/{employeeId}", method = RequestMethod.GET)
     public ResponseEntity<Employee> get(@PathVariable("employeeId") int employeeId)  {
 		Optional<Employee> employee = emsService.get(employeeId);
@@ -44,6 +48,7 @@ public class EMSController {
         return new ResponseEntity<List<Employee>>(emsService.getAll(), HttpStatus.OK);
     }
 	
+
 	@RequestMapping(value = "/employee/update", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
     public long update(@RequestBody Employee emp){
         return emsService.update(emp);

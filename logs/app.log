@@ -1,0 +1,58 @@
+2023-03-27 13:03:33,454 DEBUG c.i.e.dao [http-nio-8085-exec-6] Deleting employee details for emloyee ID 88 
+2023-03-27 13:03:33,547 DEBUG c.i.e.dao [http-nio-8085-exec-6] Deleted employee details for emloyee ID 88 
+2023-03-27 13:03:55,682 DEBUG c.i.e.dao [http-nio-8085-exec-7] Deleting employee details for emloyee ID 88 
+2023-03-27 13:03:55,739 DEBUG c.i.e.dao [http-nio-8085-exec-7] Deleted employee details for emloyee ID 88 
+2023-03-27 13:05:11,003 DEBUG c.i.e.dao [http-nio-8085-exec-10] Creating employee David
+2023-03-27 13:05:11,077 DEBUG c.i.e.dao [http-nio-8085-exec-10] Employee created 90
+2023-03-27 13:05:19,701 DEBUG c.i.e.dao [http-nio-8085-exec-1] Deleting employee details for emloyee ID 90 
+2023-03-27 13:05:19,767 DEBUG c.i.e.dao [http-nio-8085-exec-1] Deleted employee details for emloyee ID 90 
+2023-03-27 13:06:35,518 DEBUG c.i.e.dao [http-nio-8085-exec-4] Deleting employee details for emloyee ID 90 
+2023-03-27 13:06:35,709 DEBUG c.i.e.dao [http-nio-8085-exec-4] Deleted employee details for emloyee ID 90 
+2023-03-27 13:06:57,224 DEBUG c.i.e.dao [http-nio-8085-exec-6] Creating employee David
+2023-03-27 13:06:57,317 DEBUG c.i.e.dao [http-nio-8085-exec-6] Employee created 91
+2023-03-27 13:07:16,424 DEBUG c.i.e.dao [http-nio-8085-exec-2] Getting employee details for emloyee ID 91 
+2023-03-27 13:07:16,478 DEBUG c.i.e.dao [http-nio-8085-exec-2] Employee details got for emloyee ID 91 
+2023-03-27 13:07:16,479 DEBUG c.i.e.dao [http-nio-8085-exec-2] Employee details:com.infinira.ems.model.Employee@7d34cfad
+2023-03-27 13:09:32,118 DEBUG c.i.e.dao [http-nio-8085-exec-3] Getting employee details for emloyee ID 91 
+2023-03-27 13:09:32,168 DEBUG c.i.e.dao [http-nio-8085-exec-3] Employee details got for emloyee ID 91 
+2023-03-27 13:09:32,169 DEBUG c.i.e.dao [http-nio-8085-exec-3] Employee details:com.infinira.ems.model.Employee@3f17cb1d
+2023-03-27 13:10:01,465 DEBUG c.i.e.dao [http-nio-8085-exec-3] Getting employee details for emloyee ID 91 
+2023-03-27 13:10:01,659 DEBUG c.i.e.dao [http-nio-8085-exec-3] Employee details got for emloyee ID 91 
+2023-03-27 13:10:01,659 DEBUG c.i.e.dao [http-nio-8085-exec-3] Employee details:com.infinira.ems.model.Employee@70146634
+2023-03-27 15:19:09,467 DEBUG c.i.e.dao [http-nio-8085-exec-2] Getting employee details for emloyee ID 91 
+2023-03-27 15:19:11,884 ERROR c.i.e.dao [http-nio-8085-exec-2] Failed to fetch employee data of employee id 91;
+2023-03-27 15:20:11,261 DEBUG c.i.e.dao [http-nio-8085-exec-1] Getting employee details for emloyee ID 91 
+2023-03-27 15:20:11,573 DEBUG c.i.e.dao [http-nio-8085-exec-1] Employee details got for emloyee ID 91 
+2023-03-27 15:20:11,573 DEBUG c.i.e.dao [http-nio-8085-exec-1] Employee details:com.infinira.ems.model.Employee@20df1d9d
+2023-03-28 14:41:05,899 DEBUG c.i.e.dao [http-nio-8083-exec-1] Getting employee details for emloyee ID 91 
+2023-03-28 14:41:08,292 ERROR c.i.e.dao [http-nio-8083-exec-1] Failed to fetch employee data of employee id 91;
+2023-03-28 14:41:59,836 DEBUG c.i.e.dao [http-nio-8083-exec-2] Getting employee details for emloyee ID 91 
+2023-03-28 14:42:00,173 DEBUG c.i.e.dao [http-nio-8083-exec-2] Employee details got for emloyee ID 91 
+2023-03-28 14:42:00,173 DEBUG c.i.e.dao [http-nio-8083-exec-2] Employee details:com.infinira.ems.model.Employee@5dfbc77a
+2023-03-28 14:50:20,187 DEBUG c.i.e.dao [http-nio-8083-exec-5] Creating employee David
+2023-03-28 14:50:20,459 DEBUG c.i.e.dao [http-nio-8083-exec-5] Employee created 92
+2023-03-28 14:50:47,148 DEBUG c.i.e.dao [http-nio-8083-exec-8] Getting employee details for emloyee ID 92 
+2023-03-28 14:50:47,217 DEBUG c.i.e.dao [http-nio-8083-exec-8] Employee details got for emloyee ID 92 
+2023-03-28 14:50:47,217 DEBUG c.i.e.dao [http-nio-8083-exec-8] Employee details:Employee ID: 92
+Name: David JoseJph Harver Thompson
+Designation: Software engineer 1
+Salary: $25000
+Email: manmath2anmary1996@gmail.com
+Mobile: +91888324200
+Date of Birth: 1996-02-16
+Department ID: 12
+Date of Hire: 2023-12-01
+Date of Leaving: 2026-12-01
+Status: active
+Manager ID: 20
+Marital Status: SINGLE
+Differently Abled: No
+Passport Number: 46505656
+Blood Group: OPOS
+Gender: MALE
+Tax ID: 12405645
+National ID: 22100083964
+Address: kavundampalyam, coimbatore, coimbatore, Tamil nadu, India, 641030
+Date of Creation: 2023-03-28T09:20:20.422062Z
+Last Update: 2023-03-28T09:20:20.422062Z
+
