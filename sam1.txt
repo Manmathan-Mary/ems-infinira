@@ -1,6 +1,9 @@
  I am the master of my sea
 <<<<<<< HEAD
 I will be the master of my sea
+<<<<<<< HEAD
  I was the master of my sea
 =======
 >>>>>>> parent of 4d27af7 (check for removal of commit phase2)
+=======
+>>>>>>> parent of 2f59880 (check for removal of commit phase3)
