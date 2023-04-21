@@ -22,7 +22,7 @@ import com.infinira.ems.service.EMSService;
 
 @RestController
 @RequestMapping(path="/ems")
-@CrossOrigin(origins = {"http://ems-angular:80","http://localhost:8082"})
+@CrossOrigin(origins = {"http://localhost:4200","http://ems-angular:80","http://localhost:8082"})
 public class EMSController {
 	@Autowired
 	private EMSService emsService;

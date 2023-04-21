@@ -15,7 +15,7 @@ import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactor
 @EnableRedisRepositories
 public class RedisConfig {
 
-    @Value("#{systemEnvironment['REDIS_HOST'] ?: 'ems-rediss'}")
+    @Value("#{systemEnvironment['REDIS_HOST'] ?: '172.30.238.58'}")
     private String redisHost;
 
     @Value("#{systemEnvironment['REDIS_PORT'] ?: 6379}")

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <classpath>
+        <dir name="C://swinst//ems-docker//ems-infinira-2//build//classes//java//main" />
+        <dir name="C://swinst//ems-docker//ems-infinira-2//build/resources/main" />
+    </classpath>
+</application>
